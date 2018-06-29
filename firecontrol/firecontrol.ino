@@ -17,9 +17,9 @@ const int relayPin2 = 11;
 const int relayPin3 = 12;
 const int relayPin4 = 13;
 
-const int buttons[] = {0, 1, 2, 3, 4}
-const int leds[] = {5, 6, 7, 8, 9}
-const int relays[] = {10, 11, 12, 13}
+const int buttons[] = {0, 1, 2, 3, 4};
+const int leds[] = {5, 6, 7, 8, 9};
+const int relays[] = {10, 11, 12, 13};
 
 // variables will change:
 int buttonState = 0;         // variable for reading the pushbutton status
@@ -54,12 +54,12 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-
-  buttonState1 = digitalRead(buttonPin);
-  buttonState2 = digitalRead(buttonPin);
-  buttonState3 = digitalRead(buttonPin);
-  buttonState4 = digitalRead(buttonPin);
-  buttonState5 = digitalRead(buttonPin);
+/*
+  buttonState1 = digitalRead(buttonPin1);
+  buttonState2 = digitalRead(buttonPin2);
+  buttonState3 = digitalRead(buttonPin3);
+  buttonState4 = digitalRead(buttonPin4);
+  buttonState5 = digitalRead(buttonPin5);
 
   if (buttonState1 == HIGH) {
     // turn LED on:
@@ -71,14 +71,14 @@ void loop() {
     // turn LED off:
     digitalWrite(ledPin, LOW);
   }
-
+*/
    for (int i=0; i <= 4; i++){
       statusCheck(i);
    }
    
 }
 
-void statusCheck( pin ) {
+void statusCheck( int pin ) {
 
   if (buttons[pin] == HIGH) {
     digitalWrite(leds[pin], HIGH);
